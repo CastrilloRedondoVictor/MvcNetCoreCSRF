@@ -1,0 +1,16 @@
+﻿@model string[]
+
+<h2 class="text-primary">Pedido Finalizado</h2>
+
+<p class="text-secondary">Gracias por tu compra.</p>
+
+<p class="text-secondary">Dirección de envío: @ViewData["DIRECCION"]</p>
+
+<p class="text-secondary">Los siguientes productos han sido comprados:</p>
+
+<ul class="list-group">
+    @foreach (var producto in Model)
+    {
+        <li class="list-group-item list-group-item-primary">@producto</li>
+    }
+</ul>

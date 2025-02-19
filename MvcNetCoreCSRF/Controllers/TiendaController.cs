@@ -18,6 +18,7 @@ namespace MvcNetCoreCSRF.Controllers
             return View();
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public IActionResult Productos(string direccion, string[] productos)
         {
